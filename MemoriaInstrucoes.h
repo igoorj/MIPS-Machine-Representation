@@ -6,17 +6,23 @@
 
 using namespace std;
 
+class instrucao {
+    public:
+        string conteudo;
+        int endereco;
+};
+
 class MemoriaInstrucoes {
 
     private:
-        string *posicoesInstrucoes;
+        instrucao* comandos;
         int totalInstrucoesAdicionadas;
     public:
-        MemoriaInstrucoes(int totalInstrucoes);
+        MemoriaInstrucoes();
         ~MemoriaInstrucoes();
-        string getInstrucao(int indice);
-        void insereInstrucao(string novaInstrucao);
+        void insereComando(string novaInstrucao);
         void imprimeInstrucoes();
+        string buscaInstrucao(int pos); // busca instrucao na memoria
 };
 
 

@@ -5,23 +5,14 @@
 
 using namespace std;
 
-MemoriaInstrucoes::MemoriaInstrucoes(int totalInstrucoes) {
-    this->posicoesInstrucoes = new string[totalInstrucoes];
+MemoriaInstrucoes::MemoriaInstrucoes() {
+
+    this->comandos = new instrucao[128]; // Memoria de 512 bytes
     this->totalInstrucoesAdicionadas = 0;
 }
 
 MemoriaInstrucoes::~MemoriaInstrucoes() {
-    delete [] this->posicoesInstrucoes;
-}
-
-string MemoriaInstrucoes::getInstrucao(int indice) {
-    return this->posicoesInstrucoes[indice];
-}
-
-void MemoriaInstrucoes::insereInstrucao(string novaInstrucao) {
-
-    this->posicoesInstrucoes[totalInstrucoesAdicionadas] = novaInstrucao;
-    this->totalInstrucoesAdicionadas = totalInstrucoesAdicionadas + 1;  
+    delete [] this->comandos;
 }
 
 void MemoriaInstrucoes::imprimeInstrucoes() {
@@ -33,8 +24,36 @@ void MemoriaInstrucoes::imprimeInstrucoes() {
     } else {
         cout << "Instrucoes presentes na memoria ..." << endl;
         for(int i=0; i< this->totalInstrucoesAdicionadas; i++) {
-            cout << this->posicoesInstrucoes[i] << endl;
+            cout << "Posicao: " << this->comandos[i].endereco 
+            << " / Instrucao: " << this->comandos[i].conteudo << endl;
         }
     }
 
+}
+
+string MemoriaInstrucoes::buscaInstrucao(int pos) {
+    
+    if(this->totalInstrucoesAdicionadas == 0)
+        return nullptr;
+    
+    int i = 0;
+    while(i<this->totalInstrucoesAdicionadas && comandos[i].endereco <pos) {
+        i++;
+    }
+
+    // retornando a instrucao da memoria
+    return this->comandos[i].conteudo;
+}
+
+void MemoriaInstrucoes::insereComando(string instrucao) {
+
+    if(this->totalInstrucoesAdicionadas <= 128) {
+        this->comandos[totalInstrucoesAdicionadas].conteudo = instrucao;
+        this->comandos[totalInstrucoesAdicionadas].endereco = 4*(totalInstrucoesAdicionadas+1);
+        
+        this->totalInstrucoesAdicionadas++;
+    } else {
+        cout << "Erro: Memoria cheia." << endl;
+        exit(1);
+    }
 }
