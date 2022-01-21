@@ -52,6 +52,7 @@ int main(int argc, char const *argv[]) {
         case 2: {
             int qtdInstrucoes = 0;
             string instrucao;
+            string conteudo;
 
             cout << "Quantas intrucoes deseja informar?" << endl;
             cin >> qtdInstrucoes;
@@ -67,9 +68,13 @@ int main(int argc, char const *argv[]) {
 
             //memoria->imprimeInstrucoes();]
             cout << endl;
-            cout << "Imprimindo instrucao: " << endl;
-            cout << memoria->buscaInstrucao(12) << endl;
+            cout << "Imprimindo Instrucao: " << endl;
+            conteudo = memoria->buscaInstrucao(12);
+
+            cout << conteudo << endl;
             break;
+
+            delete [] memoria;
         }
         case 0: {
             cout << "Encerrando programa..." << endl;
