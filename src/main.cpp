@@ -8,7 +8,7 @@ using namespace std;
 int menu() {
 
     int opcao = -1;
-    cout << " ======== Opcoes ===========" << endl;
+    cout << " ========= Opcoes =========" << endl;
     cout << "[1] - Informar caminho do arquivo " << endl;
     cout << "[2] - Escrever manualmente a instrucao " << endl;
     cout << "[0] - Sair" << endl;
