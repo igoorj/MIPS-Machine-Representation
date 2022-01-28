@@ -2,6 +2,8 @@
 #include <string>
 #include <fstream>
 #include "MemoriaInstrucoes.h"
+#include "Decodificador.h"
+#include "BancoRegistradores.h"
 
 using namespace std;
 
@@ -54,6 +56,8 @@ int main(int argc, char const *argv[]) {
             string instrucao;
             string conteudo;
 
+            BancoRegistradores *banco = new BancoRegistradores();
+            Decodificador *dec = new Decodificador();
             cout << "Quantas intrucoes deseja informar?" << endl;
             cin >> qtdInstrucoes;
 
@@ -65,13 +69,15 @@ int main(int argc, char const *argv[]) {
                 //memoria->insereInstrucao(instrucao);
                 memoria->insereComando(instrucao);
             }
-
             //memoria->imprimeInstrucoes();]
             cout << endl;
-            cout << "Imprimindo Instrucao: " << endl;
-            conteudo = memoria->buscaInstrucao(12);
+            cout << "Imprimindo Opcode: " << endl;
+            conteudo = memoria->buscaInstrucao(8);
+            dec->decodificaInstrucao(conteudo);
 
-            cout << conteudo << endl;
+            cout << "\nImprimindo Retorno BancoRegistradores: " << endl;
+            cout << "$rs: " << banco->buscaRegistrador(dec->getRs()) << "\n$rt: " << banco->buscaRegistrador(dec->getRt()) << endl;
+
             break;
 
             delete [] memoria;

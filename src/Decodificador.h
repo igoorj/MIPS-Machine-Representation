@@ -9,16 +9,17 @@ using namespace std;
 class Decodificador {
 
     private:
-        string instrucao;
-        char* opcode;
+        string $rs;
+        string $rt;
+        string opcode;
 
     public:
         Decodificador();
         ~Decodificador();
-        string getInstrucao();
-        void setInstrucao(string instrucao);
-        void decodifica();
-        string convertToString(char* a, int size);
+        void decodificaInstrucao(string instrucao);
+        string getRs();
+        string getRt();
+        
 };
 
 #endif 

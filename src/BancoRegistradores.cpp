@@ -188,3 +188,137 @@ string BancoRegistradores::leRegistrador(string reg)
         cout << "Erro na busca do registrador " << reg << endl;
     return nullptr;
 }
+
+
+string BancoRegistradores::buscaRegistrador(string conteudo) {
+
+     if(conteudo == "00000") {
+        this->$zero == "00000";
+        return this->$zero;
+    
+    }  else if(conteudo == "00001") {
+        this->$at == "00001";
+        return this->$at;
+    
+    }  else if(conteudo == "00010") {
+        this->$v0 == "00010";
+        return this->$v0;
+    
+    }  else if(conteudo == "00011") {
+        this->$v1 == "00011";
+        return this->$v1;
+    
+    }  else if(conteudo == "00100") {
+        this->$a0 == "00100";
+        return this->$a0;
+    
+    }  else if(conteudo == "00101") {
+        this->$a1 == "00101";
+        return this->$a1;
+    
+    }  else if(conteudo == "00110") {
+        this->$a2 == "00110";
+        return this->$a2;
+    
+    }  else if(conteudo == "00111") {
+        this->$a3 == "00111";
+        return this->$a3;
+    
+    }  else if(conteudo == "01000") {
+        this->$t0 == "01000";
+        return this->$t0;
+    
+    }  else if(conteudo == "01001") {
+        this->$t1 == "01001";
+        return this->$t1;
+    
+    }  else if(conteudo == "01010") {
+        this->$t2 == "01010";
+        return this->$t2;
+    
+    }  else if(conteudo == "01011") {
+        this->$t3 == "01011";
+        return this->$t3;
+    
+    }  else if(conteudo == "01100") {
+        this->$t4 == "01100";
+        return this->$t4;
+    
+    }  else if(conteudo == "01101") {
+        this->$t5 == "01101";
+        return this->$t5;
+    
+    }  else if(conteudo == "01110") {
+        this->$t6 == "01110";
+        return this->$t6;
+    
+    }  else if(conteudo == "011111") {
+        this->$t7 == "011111";
+        return this->$t7;
+    
+    }  else if(conteudo == "10000") {
+        this->$s0 == "10000";
+        return this->$s0;
+    
+    }  else if(conteudo == "10001") {
+        this->$s1 == "10001";
+        return this->$s1;
+    
+    }  else if(conteudo == "10010") {
+        this->$s2 == "10010";
+        return this->$s2;
+    
+    }  else if(conteudo == "10011") {
+        this->$s3 == "10011";
+        return this->$s3;
+    
+    }  else if(conteudo == "10100") {
+        this->$s4 == "10100";
+        return this->$s4;
+    
+    }  else if(conteudo == "10101") {
+        this->$s5 == "10101";
+        return this->$s5;
+    
+    }  else if(conteudo == "10110") {
+        this->$s6 == "10110";
+        return this->$s6;
+    
+    }  else if(conteudo == "10111") {
+        this->$s7 == "10111";
+        return this->$s7;
+    
+    }  else if(conteudo == "11000") {
+        this->$t8 == "11000";
+        return this->$t8;
+    
+    }  else if(conteudo == "11001") {
+        this->$t9 == "11001";
+        return this->$t9;
+    
+    }  else if(conteudo == "11010") {
+        this->$k0 == "11010";
+        return this->$k0;
+    
+    }  else if(conteudo == "11011") {
+        this->$k1 == "11011";
+        return this->$k1;
+    
+    }  else if(conteudo == "11100") {
+        this->$gp == "11100";
+        return this->$gp;
+    
+    }  else if(conteudo == "11101") {
+        this->$sp == "11101";
+        return this->$sp;
+    
+    }  else if(conteudo == "11110") {
+        this->$fp == "11110";
+        return this->$fp;
+    
+    }  else if(conteudo == "11111") {
+        this->$ra == "11111";
+        return this->$ra;
+        cout <<" TEstando " << endl;
+    } 
+}
