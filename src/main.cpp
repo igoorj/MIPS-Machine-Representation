@@ -77,7 +77,9 @@ int main(int argc, char const *argv[]) {
 
             cout << "\nImprimindo Retorno BancoRegistradores: " << endl;
             cout << "$rs: " << banco->buscaRegistrador(dec->getRs()) << "\n$rt: " << banco->buscaRegistrador(dec->getRt()) << endl;
-
+            cout << endl;
+            cout << endl;
+            dec->BinaryToDecimal(10101);
             break;
 
             delete [] memoria;

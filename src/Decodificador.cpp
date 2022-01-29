@@ -37,6 +37,17 @@ void Decodificador::decodificaInstrucao(string instrucao) {
         this->$rt += instrucao[i];
     }
 
+    if (this->opcode == "") {
+        cout << "Instrucao do Tipo-R"
+    } else if (this->opcode == "") {
+        cout << "Instrucao do LW/SW"
+    } else if (this->opcode == "") {
+        cout << "Instrucao do beq"
+    } else {
+        cout << "Instrucao invalida." << endl;
+        exit(2);
+    }
+
 }
 
 string Decodificador::getRs() {
@@ -46,3 +57,31 @@ string Decodificador::getRs() {
 string Decodificador::getRt() {
     return this->$rt;
 }
+
+void Decodificador::DecimalToBinary(int n) {
+    
+    int binaryNumber[32], num=n;
+    int i = 0;
+    while (n > 0) {
+        binaryNumber[i] = n % 2;
+        n = n / 2;
+        i++;
+    }
+    cout<<"Binary form of "<<num<<" is ";
+    for (int j = i - 1; j >= 0; j--)
+        cout << binaryNumber[j];
+    cout<<endl;
+}
+
+int Decodificador::BinaryToDecimal(int n) {
+    int decimalNumber = 0;
+    int base = 1;
+    int temp = n;
+    while (temp) {
+        int lastDigit = temp % 10;
+        temp = temp/10;
+        decimalNumber += lastDigit*base;
+        base = base*2;
+    }
+   cout<<"Decimal form of "<<n<<" is "<<decimalNumber<<endl;;
+} 

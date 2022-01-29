@@ -19,7 +19,8 @@ class Decodificador {
         void decodificaInstrucao(string instrucao);
         string getRs();
         string getRt();
-        
+        void DecimalToBinary(int n);
+        int BinaryToDecimal(int n); 
 };
 
 #endif 

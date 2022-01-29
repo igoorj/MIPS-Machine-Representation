@@ -49,7 +49,7 @@ public:
     ~BancoRegistradores();
     string leRegistrador(string reg);
     void escreveRegistrador(string reg, string conteudo);
-    string buscaRegistrador(string conteudo);
+    int buscaRegistrador(string conteudo);
 };
 
 #endif
