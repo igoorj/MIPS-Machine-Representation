@@ -38,11 +38,13 @@ void Decodificador::decodificaInstrucao(string instrucao) {
     }
 
     if (this->opcode == "") {
-        cout << "Instrucao do Tipo-R"
-    } else if (this->opcode == "") {
-        cout << "Instrucao do LW/SW"
-    } else if (this->opcode == "") {
-        cout << "Instrucao do beq"
+        cout << "Instrucao do Tipo-R" << endl;
+    } else if (this->opcode == "asb") {
+        cout << "Instrucao do tipo LW" << endl;
+    } else if (this->opcode == "sdfd") {
+        cout << "Instrucao do tipo SW" << endl;
+    } else if (this->opcode == "dfdsf") {
+        cout << "Instrucao do beq" << endl;
     } else {
         cout << "Instrucao invalida." << endl;
         exit(2);

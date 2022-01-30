@@ -7,37 +7,56 @@ using namespace std;
 
 class ALU {
     
-    string andf = "0000";
-    string orf = "0001";
-    string addf = "0010";
-    string subf = "0110";
-    string sltf = "0111";
-    string nor = "1100";
-
     private:
+        string andf;
+        string orf;
+        string addf;
+        string subf;
+        string sltf;
+        string norf;
+        string result;
+        string zeroAlu;
 
     public:
-        ALU() {
-        
-            this->andf = "0000";
-            this->orf = "0001";
-            this->addf = "0010";
-            this->subf = "0110";
-            this->sltf = "0111";
-            this->nor = "1100";
+        ALU();
+       ~ALU();        
+        string getAnd() {
+            return this->andf;
         };
-
-       ~ALU() {
-
-            this->andf.clear();
-            this->orf.clear();
-            this->addf.clear();
-            this->subf.clear();
-            this->sltf.clear();
-            this->nor.clear();
-       };
-
+        string getOr() {
+            return this->orf;
+        };
+        string getAdd() {
+            return this->addf;
+        };
+        string getSub() {
+            return this->subf;
+        };
+        string getSlt() {
+            return this->sltf;
+        };
+        string getNor() {
+            return this->norf;
+        };
         
+        void entradaAlu(string controle, string dados) {
+            
+           if(controle == "0010") {
+
+           } else if (controle == "0110") {
+
+           } else if (controle == "0000") {
+
+           } else if (controle == "0001") {
+
+           } else if (controle == "0111") {
+
+           } else {
+               cout << "Sinal de controle invalido." << endl;
+               exit(1);
+           }
+        };
+        string saidaAlu();
 };
 
 #endif 
