@@ -24,3 +24,23 @@ ALU::~ALU() {
         this->sltf.clear();
         this->norf.clear();
 }
+
+void ALU::operacaoAnd(string a, string b) {
+    for (int i = 32; i > 0; i--) {
+        if (a[i] == '1' && b[i] == '1') {
+            this->result[i] = '1';
+        } else {
+            this->result[i] = '0';
+        }
+    }
+}
+
+void ALU::operacaoOr(string a, string b) {
+    for (int i = 32; i > 0; i--) {
+        if (a[i] == '1' || b[i] == '1') {
+            this->result[i] = '1';
+        } else {
+            this->result[i] = '0';
+        }
+    }
+}

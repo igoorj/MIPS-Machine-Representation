@@ -57,3 +57,7 @@ void MemoriaInstrucoes::insereComando(string instrucao) {
         exit(1);
     }
 }
+
+int MemoriaInstrucoes::getTotalInstrucoesAdicionadas() {
+    return this->totalInstrucoesAdicionadas;
+}

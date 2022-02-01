@@ -23,6 +23,7 @@ class MemoriaInstrucoes {
         void insereComando(string novaInstrucao);
         void imprimeInstrucoes();
         string buscaInstrucao(int pos); // busca instrucao na memoria
+        int getTotalInstrucoesAdicionadas();
 };
 
 
