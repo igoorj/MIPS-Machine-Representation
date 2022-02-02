@@ -4,6 +4,7 @@
 #include "MemoriaInstrucoes.h"
 #include "Decodificador.h"
 #include "BancoRegistradores.h"
+#include "Pipeline.h"
 
 using namespace std;
 
@@ -56,8 +57,6 @@ int main(int argc, char const *argv[]) {
             string instrucao;
             string conteudo;
 
-            BancoRegistradores *banco = new BancoRegistradores();
-            Decodificador *dec = new Decodificador();
             cout << "Quantas intrucoes deseja informar?" << endl;
             cin >> qtdInstrucoes;
 
@@ -69,19 +68,16 @@ int main(int argc, char const *argv[]) {
                 //memoria->insereInstrucao(instrucao);
                 memoria->insereComando(instrucao);
             }
-            //memoria->imprimeInstrucoes();]
-            cout << endl;
-            cout << "Imprimindo Opcode: " << endl;
-            conteudo = memoria->buscaInstrucao(8);
-            dec->decodificaInstrucao(conteudo);
 
-            cout << "\nImprimindo Retorno BancoRegistradores: " << endl;
-            cout << "$rs: " << banco->buscaRegistrador(dec->getRs()) << "\n$rt: " << banco->buscaRegistrador(dec->getRt()) << endl;
-            cout << endl;
-            cout << endl;
-            dec->BinaryToDecimal(10101);
-            break;
+            Pipeline *pipe = new Pipeline();
 
+            for(int i=0; i<qtdInstrucoes; i++) {
+                pipe->IF();
+                pipe->ID();
+                pipe->EX();
+                //pipe->MEM();
+                pipe->WB();
+            }
             delete [] memoria;
         }
         case 0: {

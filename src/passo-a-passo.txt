@@ -1,9 +1,0 @@
-
-
-- Dados são passados pelo arquivo de instrução
-- Dados são armazenados na memória de instrução
-- PC deve buscar os dados e passar para o decodificador (falta fazer)
-- Decodificador lê ou escreve no banco de registradores
-- Registradores são passados para a ALU
-- ALU realiza operações de acordo com o tipo de instrução
-- ALU grava na memória de instruções

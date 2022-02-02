@@ -7,38 +7,38 @@ using namespace std;
 
 BancoRegistradores::BancoRegistradores()
 {
-    this->$zero = "00000";
-    this->$at = "00001";
-    this->$v0 = "00010";
-    this->$v1 = "00011";
-    this->$a0 = "00100";
-    this->$a1 = "00101";
-    this->$a2 = "00110";
-    this->$a3 = "00111";
-    this->$t0 = "01000";
-    this->$t1 = "01001";
-    this->$t2 = "01010";
-    this->$t3 = "01011";
-    this->$t4 = "01100";
-    this->$t5 = "01101";
-    this->$t6 = "01110";
-    this->$t7 = "01111";
-    this->$t8 = "11000";
-    this->$t9 = "11001";
-    this->$s0 = "10000";
-    this->$s1 = "10001";
-    this->$s2 = "10010";
-    this->$s3 = "10011";
-    this->$s4 = "10100";
-    this->$s5 = "10101";
-    this->$s6 = "10110";
-    this->$s7 = "10111";
-    this->$k0 = "";
-    this->$k1 = "";
-    this->$gp = "11100";
-    this->$sp = "11101";
-    this->$fp = "11110";
-    this->$ra = "11111";
+    this->$zero = this->zero;
+    this->$at = this->zero;
+    this->$v0 = this->zero;
+    this->$v1 = this->zero;
+    this->$a0 = this->zero;
+    this->$a1 = this->zero;
+    this->$a2 = this->zero;
+    this->$a3 = this->zero;
+    this->$t0 = this->zero;
+    this->$t1 = this->zero;
+    this->$t2 = this->zero;
+    this->$t3 = this->zero;
+    this->$t4 = this->zero;
+    this->$t5 = this->zero;
+    this->$t6 = this->zero;
+    this->$t7 = this->zero;
+    this->$t8 = this->zero;
+    this->$t9 = this->zero;
+    this->$s0 = this->zero;
+    this->$s1 = this->zero;
+    this->$s2 = this->zero;
+    this->$s3 = this->zero;
+    this->$s4 = this->zero;
+    this->$s5 = this->zero;
+    this->$s6 = this->zero;
+    this->$s7 = this->zero;
+    this->$k0 = this->zero;
+    this->$k1 = this->zero;
+    this->$gp = this->zero;
+    this->$sp = this->zero;
+    this->$fp = this->zero;
+    this->$ra = this->zero;
 }
 
 BancoRegistradores::~BancoRegistradores()
@@ -319,6 +319,72 @@ int BancoRegistradores::buscaRegistrador(string conteudo) {
     }  else if(conteudo == "11111") {
         this->$ra == "11111";
         return stoi(this->$ra);
-        cout <<" TEstando " << endl;
     } 
+}
+
+void BancoRegistradores::imprime() {
+    if ($zero != this->zero)
+        cout << this->$zero << endl;
+    else if ($at != this->zero)
+        cout << this->$at << endl;
+    else if ($v0 != this->zero)
+        cout << this->$v0 << endl;
+    else if ($v1 != this->zero)
+        cout << this->$v1 << endl;
+    else if ($a0 != this->zero)
+        cout << this->$a0 << endl;
+    else if ($a1 != this->zero)
+        cout << this->$a1 << endl;
+    else if ($a2 != this->zero)
+        cout << this->$a2 << endl;
+    else if ($a3 != this->zero)
+        cout << this->$a3 << endl;
+    else if ($t0 != this->zero)
+        cout << this->$t0 << endl;
+    else if ($t1 != this->zero)
+        cout << this->$t1 << endl;
+    else if ($t2 != this->zero)
+        cout << this->$t2 << endl;
+    else if ($t3 != this->zero)
+        cout << this->$t3 << endl;
+    else if ($t4 != this->zero)
+        cout << this->$t4 << endl;
+    else if ($t5 != this->zero)
+        cout << this->$t5 << endl;
+    else if ($t6 != this->zero)
+        cout << this->$t6 << endl;
+    else if ($t7 != this->zero)
+        cout << this->$t7 << endl;
+    else if ($s0 != this->zero)
+        cout << this->$s0 << endl;
+    else if ($s1 != this->zero)
+        cout << this->$s1 << endl;
+    else if ($s2 != this->zero)
+        cout << this->$s2 << endl;
+    else if ($s3 != this->zero)
+        cout << this->$s3 << endl;
+    else if ($s4 != this->zero)
+        cout << this->$s4 << endl;
+    else if ($s5 != this->zero)
+        cout << this->$s5 << endl;
+    else if ($s6 != this->zero)
+        cout << this->$s6 << endl;
+    else if ($s7 != this->zero)
+        cout << this->$s7 << endl;
+    else if ($t8 != this->zero)
+        cout << this->$t8 << endl;
+    else if ($t9 != this->zero)
+        cout << this->$t9 << endl;
+    else if ($k0 != this->zero)
+        cout << this->$k0 << endl;
+    else if ($k1 != this->zero)
+        cout << this->$k1 << endl;
+    else if ($gp != this->zero)
+        cout << this->$gp << endl;
+    else if ($sp != this->zero)
+        cout << this->$sp << endl;
+    else if ($fp != this->zero)
+        cout << this->$fp << endl;
+    else if ($ra != this->zero)
+        cout << this->$ra << endl;
 }

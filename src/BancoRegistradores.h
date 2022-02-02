@@ -42,7 +42,7 @@ private:
     string $sp;
     string $fp;
     string $ra;
-
+    string zero = "00000000000000000000000000000000";
 public:
 
     BancoRegistradores();
@@ -50,6 +50,7 @@ public:
     string leRegistrador(string reg);
     void escreveRegistrador(string reg, string conteudo);
     int buscaRegistrador(string conteudo);
+    void imprime();
 };
 
 #endif

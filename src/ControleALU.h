@@ -60,13 +60,13 @@ class ControleALU {
             return this->functField;
         };
 
-        void sinalControle() {
+        void sinalControle(string aluSignal) {
 
-           if(this->ALUop == "00") {
+           if(aluSignal == "00") {
                 this->saidaALU = "0010";
-           } else if (this->ALUop == "01") {           
+           } else if (aluSignal == "01") {           
                this->saidaALU = "0110";
-           } else if (this->ALUop == "10") {
+           } else if (aluSignal == "10") {
                
                if(this->functField == "100000") {
                    this->saidaALU = "0010";
@@ -98,6 +98,10 @@ class ControleALU {
         void sinaisControleTipoLW();
         void sinaisControleTipoSW();
         void sinaisControleTipoBeq();
+
+        void setALUop(string aluop) {
+            this->ALUop = aluop;
+        }   
 };
 
 #endif 

@@ -38,18 +38,14 @@ void MemoriaDados::executaOperacao(string address, string writeData, string memR
         
         int intAddress = stoi(address, 0, 2);
         if (intAddress > 128) {
-            cout << "This address don't exist!" << endl;
+            cout << "Endereco nao encontrado!" << endl;
             exit(1);
         }
         else {
-            //cout << "INT ADDRESS: " << intAddress << endl;
-            //cout << "\n" << memory[intAddress][0] << endl;
+
             for (int i = 0; i < 32; i++) {
-                //cout << "I: " << i << endl;
+
                 if (memRead == "1") {
-                    //cout << "Entra no if" << endl;
-                    //cout << "MEM DATA SIZE " << this->memoryData.size() << endl;
-                    //cout << "memoryData " << this->memoryData << endl;
                     this->memoryData[i] = this->memory[intAddress][i];
                 }
                 else {

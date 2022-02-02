@@ -9,9 +9,14 @@ using namespace std;
 class Decodificador {
 
     private:
+        string aluop;
         string $rs;
         string $rt;
+        string $rd;
         string opcode;
+        string $address;
+        string $funct;
+        string $shamt;
 
     public:
         Decodificador();
@@ -19,8 +24,10 @@ class Decodificador {
         void decodificaInstrucao(string instrucao);
         string getRs();
         string getRt();
+        string getRd() { return this->$rd; };
         void DecimalToBinary(int n);
         int BinaryToDecimal(int n); 
+        string getALUOp() { return this->aluop; };
 };
 
 #endif 
